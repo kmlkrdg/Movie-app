@@ -18,11 +18,11 @@ function Detail() {
     return <div>Loading...</div>;
   }
 
-  console.log('data', data);
+  console.log('data', data); //arkaplana filminn resimin koyacağız,Filmin ismini ve Filme açıklama koyduğm kısım
 
-  const { backdrop_path, title, overview } = data;
+  const { backdrop_path, title, overview } = data;    
 
-  return (
+  return (                  //Data gelmez ise çalışıcak kısım
     <div className='relative h-[720px]'>
       <img
         src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
@@ -30,7 +30,7 @@ function Detail() {
         className='absolute -z-10'
       />
 
-      <div className='absolute bottom-0 left-9'>
+      <div className='absolute bottom-0 left-9'>  
         <div className='bg-white rounded-md p-2 opacity-90'>
           <h1 className='text-5xl font-semibold text-black'>{title}</h1>
         </div>

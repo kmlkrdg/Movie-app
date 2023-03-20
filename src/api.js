@@ -1,4 +1,6 @@
 import axios from 'axios';
+          
+//Burada API key ve Apı adresini tanımlıyoruz
 
 const BASE_ENDPOINT = 'https://api.themoviedb.org/3/movie';
 const API_KEY = 'a2df3d1a7611194432bbdf1fc80540f2';

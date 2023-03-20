@@ -1,10 +1,10 @@
 import { IconStar } from '@tabler/icons-react';
 import { useState } from 'react';
 
-function FavButton() {
+function FavButton() {     //Burada Fav butonuna renk verme ve çalışma prensibini tanımladık.
   const [isFav, setIsFav] = useState(false);
 
-  const color = isFav ? 'yellow' : 'white';
+  const color = isFav ? 'red' : 'red';
 
   return (
     <div className='cursor-pointer' onClick={() => setIsFav((prev) => !prev)}>
@@ -12,5 +12,4 @@ function FavButton() {
     </div>
   );
 }
-
 export default FavButton;

@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom';
 import Description from './Description';
 import FavButton from './FavButton';
 
-function MovieCard({ data }) {
+function MovieCard({ data }) {       //data ile ilgili olanlar Apiden gelicek.
   return (
     <div className='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
       <Link to={`/detail/${data.id}`}>
         <img
-          className='rounded-t-lg'
+          className='rounded-t-lg'               //Yüklenme sırasında hata oluşursa Apiden data gelmezse basılacak görüntü
           src={`https://image.tmdb.org/t/p/w400${data.poster_path}`}
           alt=''
         />
       </Link>
       <div className='p-5'>
-        <Link to={`/detail/${data.id}`}>
+        <Link to={`/detail/${data.id}`}>       
           <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
             {data.title}
           </h5>
@@ -28,7 +28,7 @@ function MovieCard({ data }) {
             className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
           >
             Details
-            <svg
+            <svg                      //Detaylar butonu
               aria-hidden='true'
               className='w-4 h-4 ml-2 -mr-1'
               fill='currentColor'
@@ -41,6 +41,7 @@ function MovieCard({ data }) {
                 clipRule='evenodd'
               ></path>
             </svg>
+            
           </Link>
 
           <FavButton />

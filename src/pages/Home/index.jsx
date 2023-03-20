@@ -3,6 +3,7 @@ import React from 'react';
 import { getMovies } from '../../api';
 import MovieCard from '../../components/MovieCard';
 
+
 function Home() {
   const {
     data,
